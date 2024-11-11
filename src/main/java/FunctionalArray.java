@@ -24,9 +24,6 @@ public class FunctionalArray {
     }
 
     private void addItem(int index) {
-        if (index == 0) {
-            head = new BinaryTreeNode(0);
-        }
         index++;
         int greatestBit = greatestBit(index);
         int parentIndex = index - greatestBit | (greatestBit >> 1);

@@ -22,4 +22,10 @@ public class FunctionalArrayTest {
         array.set(3, 8);
         Assertions.assertEquals(6, array.get(4));
     }
+
+    @Test
+    public void EmptyArrayIsEmpty() {
+        FunctionalArray array = new FunctionalArray(0);
+        Assertions.assertThrows(ArrayIndexOutOfBoundsException.class, () -> array.get(0));
+    }
 }
